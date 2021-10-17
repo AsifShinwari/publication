@@ -1,0 +1,36 @@
+### Rewrite Rules Added by CyberPanel Rewrite Rule Generator
+
+RewriteEngine On
+Header add Access-Control-Allow-Origin "https://www.word-meaning.com"
+Header add Access-Control-Allow-Methods "PUT, GET, POST, DELETE, OPTIONS"
+Header add Access-Control-Allow-Headers "origin, x-requested-with, content-type, X-CSRF-Token"
+
+
+RewriteCond %{HTTPS}  !=on
+RewriteRule ^/?(.*) https://%{SERVER_NAME}/$1 [R,L]
+
+### End CyberPanel Generated Rules.
+
+
+<IfModule mod_rewrite.c>
+Options +FollowSymLinks
+RewriteEngine On
+
+RewriteCond %{REQUEST_URI} !^/public/ 
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+
+
+RewriteRule ^(.*)$ /public/$1 
+#RewriteRule ^ index.php [L]
+RewriteRule ^(/)?$ public/index.php [L] 
+</IfModule>
+
+<IfModule mod_php8.c>
+php_value max_execution_time 3000000
+</IfModule>
+rewriteCond %{HTTPS} !on
+rewriteCond %{HTTP:X-Forwarded-Proto} !https
+rewriteRule ^(.*)$ https://%{SERVER_NAME}%{REQUEST_URI} [R,L]

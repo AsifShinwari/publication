@@ -1,0 +1,272 @@
+#mobile-nav-toggle {
+	top:30px;
+}
+.advisory {
+	text-align:center;
+	margin-top:30px;
+	margin-bottom:30px;	
+}
+
+.center-content {
+	margin-left:auto  !important;
+	margin-right:auto  !important;	
+	display:block  !important;
+}
+
+.ph-css::placeholder { 
+  color: #063453;
+  font-weight:900;
+  opacity:0.5;
+}
+.form-boldtxt{
+	font-weight:900;
+	color: #063453;
+}
+
+.custom-small-btn{
+	font-size:10px !important;
+	line-height:25px;
+	padding: 0px 10px;
+}
+
+.custom-small-label{
+	font-size:10px !important;
+	padding: 0px !important;
+	margin:0px !important;
+	font-weight:600;
+	color: #1d2134;
+}
+
+.form-control[readonly] {
+    background-color: #fff;
+	border:0;
+	}
+	
+select:disabled {
+    background-color: #fff;
+	border:0;
+	}
+	
+.button-screenfix {
+	position: fixed;
+    bottom: 25%;
+    right: 5%;
+}
+
+.section-gap-bottom-only {
+    padding-bottom: 120px !important;
+}
+
+.iirreport {
+	margin-top:30px;
+	margin-bottom:30px;	
+}
+
+.iirreport h3{
+font-size:25px !important;
+font-weight: 300;
+}
+.iirreport span{
+ color:#063453  !important;
+}
+
+.iirreport a{
+ color:#e83184    !important;
+ font-size:16px !important;
+}
+
+.sponsored{
+ color:#e83184    !important;
+ font-size:12px !important;
+}
+
+.profile-name{
+ color:#e83184    !important;
+ font-size: 22px !important;
+ font-weight: 600;
+ padding-left:30px;
+}
+.justifytext{
+  text-align:justify !important;
+}
+
+.post-content-area{
+	background-color:#f9f9ff;
+}
+.widget-wrap{
+	background:#FFFFFF;
+}
+.widget-wrap .popular-post-widget .popular-title{
+	background:#04091e;
+}
+.widget-wrap .post-category-widget .category-title{
+	background:#04091e;
+}
+
+.widget-wrap {
+	padding:0px;
+}
+
+.widget-wrap .post-category-widget .cat-list li{
+	padding-bottom:0px;
+}
+
+.widget-wrap .tag-cloud-widget ul li{
+    padding: 10px 25px;
+}
+
+.widget-wrap .tag-cloud-widget ul li a{
+    font-size: 18px;
+	font-weight:500;
+}
+
+
+
+
+.widget-wrap .tag-cloud-widget ul li.active{
+	background:#063453 ;
+}
+.widget-wrap .tag-cloud-widget ul li.active a{
+    color:#fff;
+}
+
+.sidebar-widgets {
+    padding-bottom: 20px;
+}
+.search-result{
+	padding:20px;
+	border-bottom:1px solid #eee;
+}
+.search-key{
+	padding:10px;
+	font-weight:500;
+}
+.search-key span{
+	color:#063453;
+}
+.search-type{
+	color:#063453;
+	font-weight:500;
+}
+.search-title{
+	padding-bottom:10px;
+	color:#07488b;
+	font-weight:300;
+	font-size: 22px;
+}
+.search-author{
+	color:#939495;
+	font-weight:300;
+	font-size: 13px;
+	padding-bottom: 10px;
+}
+.blog-pagination{
+	padding-top:10px;
+	padding-bottom:10px;
+}
+.tooltip-inner {
+    text-align: center;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    margin-bottom: 0px;
+    background-color:#fff;
+    font-size: 15px;
+	color:#063453;
+	border: 1px solid #314A5B;
+	padding:10px;
+	font-weight:500;
+}
+
+.book-pub-year{
+	padding:20px 0px;
+}
+.book-pub-year span{
+	color:#063453;
+}
+.book-small-title{
+	padding:10px 0px 30px 0px;
+	color:#07488b;
+	font-weight:300;
+	font-size: 14px;
+	text-align:center
+}
+
+.single-post-custom{
+	background:#FFFFFF;
+	border: 1px solid #eee;
+	padding: 30px;
+}
+.book-title{
+	padding:00px 0px 10px 0px;
+	color:#07488b;
+	font-weight:500;
+}
+.book-author{
+	color:#063453;
+	font-weight:500;
+	font-size: 14px;
+}
+.book-details{
+}
+.book-details span{
+	font-weight:500;
+}
+.views {
+    display: block;
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+
+    -moz-border-radius: 30px; /* or 50% */
+    border-radius: 30px; /* or 50% */
+
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 2em;
+}
+.chapter-title span{
+	font-weight: 300;
+    color: #063453;
+    font-size: 13px;
+}
+
+.top-category-widget-area .single-cat-widget .content-details h2{
+	color:#fff;
+	}
+.top-category-widget-area .single-cat-widget .content-details p{
+	margin: 0px 50px !important;
+	}
+.top-category-widget-area .single-cat-widget .overlay-bg {
+    margin: 5%;
+	}
+	
+	.single-footer-widget h6 {
+    color: #063453;
+    margin-bottom: 10px;
+}
+
+/* CSS for Pagination */
+#page_links
+ {
+  font-size: 12px;
+  border:1px #000000 solid;
+  padding: 6px;
+  margin: 2px;
+  background-color: #fff;
+  color: #04091e;
+  text-decoration: none;
+ }
+ #page_a_link
+ {
+  font-size: 12px;
+  border:1px #000000 solid;
+  color: #fff;
+  background-color: #04091e;
+  padding: 6px;
+  margin: 2px;
+  text-decoration: none;
+ }
+ /* End: CSS for Pagination */
+
