@@ -191,6 +191,18 @@ Route::middleware('auth')->group(function () {
     Route::post('admin/panel/conferences/contents/update',[\App\Http\Livewire\Conferences\IndexController::class,'con_update'])->name('backend.conference.cont.update');
     Route::post('admin/panel/conferences/contents/image/store',[\App\Http\Livewire\Conferences\IndexController::class,'con_image_store'])->name('backend.conference.cont.image.store');
     Route::get('admin/panel/conferences/contents/image/delete/{id}',[\App\Http\Livewire\Conferences\IndexController::class,'con_image_delete'])->name('backend.conference.cont.image.delete');
+    
+    //enter dev
+    Route::get('admin/panel/entr-dev/index',[App\Http\Livewire\Resources\EnterDev\Index::class,'index'])->name('backend.enter.dev.index');
+    Route::post('admin/panel/entr-dev/update',[App\Http\Livewire\Resources\EnterDev\Index::class,'update'])->name('backend.enter.dev.update');
+    Route::post('admin/panel/entr-dev/image/store',[App\Http\Livewire\Resources\EnterDev\Index::class,'image_store'])->name('backend.enter.dev.image_store');
+    Route::get('admin/panel/entr-dev/image_delete/{id}',[App\Http\Livewire\Resources\EnterDev\Index::class,'image_delete'])->name('backend.enter.dev.image_delete');
+
+    //our services
+    
+    Route::get('admin/panel/our-service/index',\App\Http\Livewire\OurServices\Index::class)->name('backend.our.services.index');
+    Route::get('admin/panel/our-service/add',\App\Http\Livewire\OurServices\Add::class)->name('backend.our.services.add');
+    Route::get('admin/panel/our-service/edit/{id}',\App\Http\Livewire\OurServices\Edit::class)->name('backend.our.services.edit');
 
 // backend routes
 });

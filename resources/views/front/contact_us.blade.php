@@ -46,7 +46,7 @@
 								</div>
 								<div class="contact-details">
 									<h5>{{$general_info->email}}</h5>
-									<p>Send us your query anytime!</p>
+									<p>Send us your query</p>
 								</div>
 							</div>														
 						</div>
@@ -59,11 +59,9 @@
 											<option value="">Select your Subject</option>
 											
 											<option value="General Queries">General Queries</option>
-											<option value="Regarding Patent Application">Regarding Patent Application</option>
-											<option value="Regarding Funding and Investment">Regarding Funding and Investment</option>
-											<option value="Regarding Event Sponsorship">Regarding Event Sponsorship</option>	
-											<option value="Regarding Publication">Regarding Publication</option>	
-											<option value="Regarding Mentoring">Regarding Mentoring</option>							  
+											<option value="Regarding Journals">Regarding Journals</option>
+											<option value="Regarding Conferences">Regarding Conferences</option>
+											<option value="Regarding Publications">Regarding Publications</option>								  
 										</select>
                                         @error('subject') <span class="text-danger">{{$message}}</span> @enderror
                                         <br>

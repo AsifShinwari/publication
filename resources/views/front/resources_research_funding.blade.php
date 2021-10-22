@@ -29,7 +29,7 @@
 							<p class="justifytext">{{$page_data->message}}</p>
 						</div>
 					</div>
-					
+					{{--
 					<div class="row d-flex justify-content-center">
 						<div class="menu-content pb-60 pt-60 col-lg-8">
 							<div class="title text-center">
@@ -50,12 +50,12 @@
 						</div>
 					</div>
 					
-				</div>	
+				</div>	--}}
 			</section>
 			<!-- End info Area -->		
 			
 			<!-- Start events-list Area -->
-			<section class="events-list-area section-gap-bottom-only event-page-lists">
+		{{--	<section class="events-list-area section-gap-bottom-only event-page-lists">
 				<div class="container">
 					<div class="row d-flex justify-content-center">
 						<div class="menu-content pb-70 col-lg-8">
@@ -87,7 +87,7 @@
 						<button class="load-more-proj-our text-uppercase primary-btn mx-auto mt-40">Load more Projects</button>
 					</div>	
 				</div>	
-			</section>
+			</section> --}}
 			<!-- End events-list Area -->	
 	
 @endsection

@@ -56,60 +56,28 @@
                                         @endforeach
 									</ul>--}}
 									<ul class="cat-list">
+										@php $our_services=DB::table('our_services')->orderBy('id','asc')->get(); @endphp
+										@foreach($our_services as $item)
 										<li>
-											<a class="d-flex justify-content-between">
-												<p>English Editing Services</p>
+											<a class="d-flex justify-content-between" href="#" onclick="show_item(event,'item{{$item->id}}')">
+												<p>{{$item->title}}</p>
 											</a>
 										</li>
-										<li>
-											<a class="d-flex justify-content-between">
-												<p>JOURNAL PUBLICATION</p>
-											</a>
-										</li>
-										<li>
-											<a class="d-flex justify-content-between">
-												<p>PROPOSAL WRITING/EDITING</p>
-											</a>
-										</li>
-										<li>
-											<a class="d-flex justify-content-between">
-												<p>CONTENT WRITING</p>
-											</a>
-										</li>
-										<li>
-											<a class="d-flex justify-content-between">
-												<p>RESEARCH ARTICLE WRITING/EDITING</p>
-											</a>
-										</li>
-										<li>
-											<a class="d-flex justify-content-between">
-												<p>THESIS WRITING/EDITING</p>
-											</a>
-										</li>
-										<li>
-											<a class="d-flex justify-content-between">
-												<p>REPORT WRITING</p>
-											</a>
-										</li>
-										<li>
-											<a class="d-flex justify-content-between">
-												<p>TRANSLATION WRITING</p>
-											</a>
-										</li>
-										<li>
-											<a class="d-flex justify-content-between">
-												<p>PROOF READING</p>
-											</a>
-										</li>
-										<li>
-											<a class="d-flex justify-content-between">
-												<p>PLAGIARISM WRITING</p>
-											</a>
-										</li>
+										@endforeach
 									</ul>
 								</div>	
 
 							</div>
+						</div>
+						<div class="col-lg-8">
+						@foreach($our_services as $item)
+							<div class="container py-4 bg-white {{ $loop->index!=0 ? 'd-none' : '' }} items" id="item{{$item->id}}">
+								<h4>{{$item->title}}</h4>
+								<hr class="mb-4">
+								<img src="{{asset('storage/'.$item->image)}}" alt="image" >
+								<p class="mt-4">{{$item->description}}</p>
+							</div>
+						@endforeach
 						</div>
 						{{--
 						<div class="col-lg-8">
@@ -190,6 +158,13 @@
 
 @section('manual_scripts')
 <script>
-    
+
+	function show_item(e,item_id){
+		e.preventDefault();
+		$('.items').removeClass('d-none');
+    	$('.items').addClass('d-none');
+		$(`#${item_id}`).removeClass('d-none');
+		return;
+	}
 </script>
 @endsection

@@ -196,7 +196,8 @@
 								<div class="thumb-wrap relative m-0">
 									<div class="thumb relative rounded-circle m-0" style="width:180px;height:180px;">
 										<div class="overlay overlay-bg"></div>	
-										<img class="img-flui rounded-circle" style="width:180px;height:180px;" src="{{asset('storage/'.$item->logo)}}" alt="Post Image">
+										<div class="img-flui rounded-circle" style="width:180px;height:180px;background: url('{{asset('storage/'.$item->logo)}}');background-repeat: no-repeat;background-size: 100% 100%;background-position: zoom;" alt="Post Image">
+									</div>
 									</div>
 																		
 								</div>

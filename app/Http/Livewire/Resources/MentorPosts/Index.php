@@ -35,7 +35,7 @@ class Index extends Component
         $search=$this->search;
 
         $data=DB::table('mentor_posts')
-        ->join('our_mentors','mentor_posts.mentor_id','our_mentors.id')
+        ->leftJoin('our_mentors','mentor_posts.mentor_id','our_mentors.id')
         ->select('mentor_posts.*','our_mentors.name as mentor_name')
         ->when($search,function($query) use($search){
             $query->orWhere('our_mentors.name','like','%'.$search.'%');

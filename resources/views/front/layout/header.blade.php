@@ -20,14 +20,14 @@
 			          </li>	
 			          <li><a href="{{route('front.journals.index')}}">Journals</a></li>
 
-					  @php $current=DB::table('conferences')->where('year','>=',date('Y-m-d'))->first(); 
+					  @php $current=DB::table('conferences')->where('year','>=',date('Y-m-d'))->get(); 
 					  $past=DB::table('conferences')->where('year','<',date('Y-m-d'))->get();  @endphp
 
 					  <li class="menu-has-children"><a href="#">Conferences</a>
 					  	<ul>
-						 @if($current)			              
-			              <li><a href="{{route('front.conference.single',$current->id)}}">{{date('Y',strtotime($current->year))}} | {{substr($current->title,0,50)}}</a></li>
-						 @endif
+						 @foreach($current as $item)			              
+			              <li><a href="{{route('front.conference.single',$item->id)}}">{{date('Y',strtotime($item->year))}} | {{substr($item->title,0,50)}}</a></li>
+						 @endforeach
 			              <li class="menu-has-children"><a href="#">Past Conferences</a>
 							<ul>
 								@foreach($past as $past_con)
@@ -59,10 +59,10 @@
 			            <ul>			              
 			              <li><a href="{{route('front.resources.research.funding.index')}}">Research Funding</a></li>
 						  <li><a href="{{route('front.resources.entrepreneurship.development.index')}}">Entrepreneurship Development</a></li>
-						  <li><a href="{{route('front.resources.event.sponsership.index')}}">Event Sponsorship</a></li>
+						  {{--<li><a href="{{route('front.resources.event.sponsership.index')}}">Event Sponsorship</a></li>
 						  <li><a href="{{route('front.resources.patent.index')}}">Patent</a></li>
 						  
-						  <li><a href="{{route('front.resources.mentor.posts.index')}}">Mentor's Posts</a></li>
+						  <li><a href="{{route('front.resources.mentor.posts.index')}}">Mentor's Posts</a></li>--}}
 						  <!-- <li><a href="plagiarism-checker.html">Plagiarism Checker</a></li> -->
 			            </ul>
 			          </li>	

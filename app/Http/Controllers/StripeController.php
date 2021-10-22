@@ -76,11 +76,11 @@ class StripeController extends Controller
                 'object'=>$result->source->object,
             ];
 
-            Mail::send('mail', $data, function($message) use ($to_name, $to_email,$email) {
+            Mail::send('mail', $data, function($message) use ($to_name, $to_email,$email,$result) {
             $message->to($to_email, $to_name)
-            ->subject('Charges Received!');
+            ->subject('ESRO Receipt  Invoice: '.$result->id);
             $message->cc('esro.europe@gmail.com');
-            $message->from('esro.europe@app.com','Charges Received From '.$email);
+            $message->from('esro.europe@app.com','ESRO Receipt  Invoice: '.$result->id);
             });
 
             Session::flash('success', 'Payment successful!');

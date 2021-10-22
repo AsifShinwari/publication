@@ -21,39 +21,9 @@
         <section class="events-list-area section-gap event-page-lists">
 				
 				<div class="container">
-				
-					<div class="row d-flex justify-content-center">
-						<div class="menu-content pb-70 col-lg-8">
-							<div class="title text-center">
-								<h1 class="mb-10">Our Mentors</h1>
-							</div>
-						</div>
-					</div>
-				    <div class="row">	
-                        @foreach($data as $item)
-						<div class='col-md-4'>
-							<div class='advisory'>
-								<img src="{{asset('storage/'.$item->image)}}" class='img-fluid rounded' >
-								<h4 style='padding-top:10px;'>{{$item->name}}</h4>
-								<p>
-									{{$item->qualification}}
-								</p>
-								<p>
-									<b>{{$item->country_name}}</b>
-								</p>
-							</div>
-						</div>	
-                        @endforeach
-                    </div>
-					<div class="row d-flex justify-content-center">
-						<div class="menu-content pb-60 pt-60 col-lg-8">
-							<div class="title text-center">
-								<h1 class="mb-10">Want to Join as a Mentor ?</h1>
-								<p>Interested to join as mentor text content here, Interested to join as mentor text content here, Interested to join as mentor text content here. </p>
-								<a href="{{route('front.mentor.join')}}" class="text-uppercase primary-btn mx-auto mt-40">Apply to Join</a>	
-							</div>
-						</div>
-					</div>
+					@php  $data = DB::table("enter_dev")->orderBy('id','desc')->first(); @endphp
+
+					{!!$data->contents!!}
 				</div>
 					
 			</section>

@@ -35,7 +35,7 @@
                 <hr style="border-color:#ffffff80;">
                 
                 <b>Currency</b>
-                <p style="color:grey;padding-top:6px;margin:0px;">{{$currency}}</p>
+                <p style="color:grey;padding-top:6px;margin:0px;">@if($currency=='eur') EURO @elseif($currency=='usd') USD @endif</p>
                 <hr style="border-color:#ffffff80;">
                 
                 <b>Description</b>
@@ -48,6 +48,9 @@
                 
                 <b>Card</b>
                 <p style="color:grey;padding-top:6px;margin:0px;margin-bottom:20px;">xxxxxxxxxxxx{{$last4}}&nbsp;{{$brand}}</p>
+                <hr style="border-color:#ffffff80;">
+                <br><br>
+                <b style="text-align:center;">This receipt is computer generated. hence no seal & signature required<b>
             </td>
         </tr>
     </tbody>

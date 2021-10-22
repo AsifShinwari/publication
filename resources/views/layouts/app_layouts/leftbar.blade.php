@@ -72,14 +72,16 @@
                                         </a>
                                         <ul class="nav-second-level" aria-expanded="false">
                                             <li><a href="{{route('backend.resourses.research.funding.index')}}">Research Funding</a></li>
-                                            <li><a href="{{route('backend.mentors.index')}}">Entrepreneurship Development</a></li>
+                                            {{--<li><a href="{{route('backend.mentors.index')}}">Entrepreneurship Development</a></li>--}}
+                                            <li><a href="{{route('backend.enter.dev.index')}}">Entrepreneurship Development</a></li>
                                             <li><a href="{{route('backend.event.sponsership.index')}}">Event Sponsorship</a></li>
                                             <li><a href="{{route('backend.patent.index')}}">Patent</a></li>
                                             <li><a href="{{route('backend.mentor.posts.index')}}">Mentor Posts</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="{{route('backend.contact.us.index')}}">Contact</a></li>
-                                    <li><a href="{{route('backend.publication.index')}}">Publications</a></li>
+                                    {{--<li><a href="{{route('backend.publication.index')}}">Publications</a></li>--}}
+                                    <li><a href="{{route('backend.our.services.index')}}">Publications</a></li>
                                     <li><a href="{{route('backend.publication.journal.index')}}">Journals</a></li>
 
                                 </ul>
